@@ -4,20 +4,22 @@
     {
         static void Main(string[] args)
         {
+            //static keyword 
+            Person person = new Person();
+            Console.WriteLine($"Person signature: {Person.signature}");
+            Person.StaticClassExample();
 
-            // Abstraction
-            Dog dog = new Dog();
-            dog.AnimalSayHello();
-            dog.AnimalSayFullHello();
+            //// Abstraction
+            //Dog dog = new Dog();
+            //dog.AnimalSayHello();
+            //dog.AnimalSayFullHello();
 
             //// Encapsulation 
-            //person person = new person();
-            //string firstname = person.firstname = "test";
-            //string lastname = person.lastname = "test";
-
-            //int age = person.age = 1;
-
-            //console.writeline($"full name: {firstname} {lastname}, age: {age}, number: {person.number}");
+            //Person person = new Person();
+            //string firstname = person.firstName = "test";
+            //string lastname = person.lastName = "test";
+            //int age = person.Age = 1;
+            //Console.WriteLine($"full name: {firstname} {lastname}, age: {age}, number: {person.number}");
 
 
         }

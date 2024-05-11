@@ -11,7 +11,7 @@ namespace CSharp_Advanced
         public string firstName;
         public string lastName;
         private int age;
-
+        public static string signature = "Person Test";
         public int Age
         {
             get { return age; }
@@ -19,5 +19,10 @@ namespace CSharp_Advanced
         }
 
         public int number { get; private set; } = 2;
+
+        public static void StaticClassExample()
+        {
+            Console.WriteLine("Static class Example");
+        }
     }
 }
