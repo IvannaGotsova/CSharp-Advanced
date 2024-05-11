@@ -4,15 +4,22 @@
     {
         static void Main(string[] args)
         {
-            Person person = new Person();
-            string firstName = person.firstName = "Test";
-            string lastName = person.lastName = "Test";
 
-            int age = person.Age = 1;
+            // Abstraction
+            Dog dog = new Dog();
+            dog.AnimalSayHello();
+            dog.AnimalSayFullHello();
 
-            Console.WriteLine($"Full Name: {firstName} {lastName}, Age: {age}, Number: {person.number}");
+            //// Encapsulation 
+            //person person = new person();
+            //string firstname = person.firstname = "test";
+            //string lastname = person.lastname = "test";
 
-            
+            //int age = person.age = 1;
+
+            //console.writeline($"full name: {firstname} {lastname}, age: {age}, number: {person.number}");
+
+
         }
     }
 }
