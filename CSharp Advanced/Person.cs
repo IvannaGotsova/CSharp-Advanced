@@ -17,5 +17,7 @@ namespace CSharp_Advanced
             get { return age; }
             set { age = value; }
         }
+
+        public int number { get; private set; } = 2;
     }
 }

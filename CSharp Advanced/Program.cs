@@ -10,9 +10,9 @@
 
             int age = person.Age = 1;
 
-            Console.WriteLine($"Full Name: {firstName} {lastName}, Age: {age}");
+            Console.WriteLine($"Full Name: {firstName} {lastName}, Age: {age}, Number: {person.number}");
 
-
+            
         }
     }
 }
