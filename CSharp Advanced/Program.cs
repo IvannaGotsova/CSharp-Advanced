@@ -4,7 +4,15 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Person person = new Person();
+            string firstName = person.firstName = "Test";
+            string lastName = person.lastName = "Test";
+
+            int age = person.Age = 1;
+
+            Console.WriteLine($"Full Name: {firstName} {lastName}, Age: {age}");
+
+
         }
     }
 }
