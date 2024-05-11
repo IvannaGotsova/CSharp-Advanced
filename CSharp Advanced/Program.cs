@@ -4,10 +4,16 @@
     {
         static void Main(string[] args)
         {
-            //static keyword 
-            Person person = new Person();
-            Console.WriteLine($"Person signature: {Person.signature}");
-            Person.StaticClassExample();
+            //Extension method 
+            ClassToBeExtended classToBeExtended = new ClassToBeExtended();
+            classToBeExtended.FourthMethod();
+            classToBeExtended.FifthMethod();
+            classToBeExtended.SixthMethod();
+
+            ////static keyword 
+            //Person person = new Person();
+            //Console.WriteLine($"Person signature: {Person.signature}");
+            //Person.StaticClassExample();
 
             //// Abstraction
             //Dog dog = new Dog();
