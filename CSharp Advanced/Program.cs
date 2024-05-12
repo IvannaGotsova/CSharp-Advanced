@@ -7,34 +7,42 @@ namespace CSharp_Advanced
     {
         //public delegate void MyDelegateExample(string delegateStringExample);
 
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
+            //Asynchronous programming
+
+            FirstProcess();
+            SecondProcess();
+            ThirdProcess();
+            FourthProcess();
+            FifthProcess();
+
             //Events
-            SeniorEmployee seniorEmployee = new SeniorEmployee ();
-            seniorEmployee.Salary = 1000;
+            //SeniorEmployee seniorEmployee = new SeniorEmployee ();
+            //seniorEmployee.Salary = 1000;
 
-            seniorEmployee.OnSalaryIncreased += EventOnSalaryIncreaased;
-            seniorEmployee.OnSalaryDecreased += EventOnSalaryDecreaased;
+            //seniorEmployee.OnSalaryIncreased += EventOnSalaryIncreaased;
+            //seniorEmployee.OnSalaryDecreased += EventOnSalaryDecreaased;
 
-            seniorEmployee.Salary = 1500;
-            seniorEmployee.Salary = 500;
-            seniorEmployee.Salary = 300;
-            seniorEmployee.Salary = 500;
-            seniorEmployee.Salary = 300;
-            seniorEmployee.Salary = 500;
+            //seniorEmployee.Salary = 1500;
+            //seniorEmployee.Salary = 500;
+            //seniorEmployee.Salary = 300;
+            //seniorEmployee.Salary = 500;
+            //seniorEmployee.Salary = 300;
+            //seniorEmployee.Salary = 500;
 
-            JuniorEmployee juniorEmployee = new JuniorEmployee();
-            juniorEmployee.Experience = 30;
+            //JuniorEmployee juniorEmployee = new JuniorEmployee();
+            //juniorEmployee.Experience = 30;
 
-            juniorEmployee.OnExperienceIncreased += EventOnExperienceIncreased;
-            juniorEmployee.OnExperienceDecreased += EventOnExperienceDecreased;
+            //juniorEmployee.OnExperienceIncreased += EventOnExperienceIncreased;
+            //juniorEmployee.OnExperienceDecreased += EventOnExperienceDecreased;
 
-            juniorEmployee.Experience = 20;
-            juniorEmployee.Experience = 10;
-            juniorEmployee.Experience = 20;
-            juniorEmployee.Experience = 30;
-            juniorEmployee.Experience = 40;
-            juniorEmployee.Experience = 30;
+            //juniorEmployee.Experience = 20;
+            //juniorEmployee.Experience = 10;
+            //juniorEmployee.Experience = 20;
+            //juniorEmployee.Experience = 30;
+            //juniorEmployee.Experience = 40;
+            //juniorEmployee.Experience = 30;
 
             ////Delegates
             //MyDelegateExample delegateExample = FirstMethodExample;
@@ -106,29 +114,62 @@ namespace CSharp_Advanced
 
         }
 
-        private static void EventOnExperienceDecreased(object? sender, int e)
+        private static void FifthProcess()
         {
-            var juniorEmployee = sender as JuniorEmployee;
-            Console.WriteLine("Experience increased");
+            Console.WriteLine("Fifth Process begin");
+            Console.WriteLine("Fifth Process stop");
         }
 
-        private static void EventOnExperienceIncreased(object? sender, int e)
+        private static async void FourthProcess()
         {
-            var juniorEmployee = sender as JuniorEmployee;
-            Console.WriteLine("Experience decreased");
+            await Task.Delay(1000);
+            Console.WriteLine("Fourth Process begin");
+            Console.WriteLine("Fourth Process stop");
         }
 
-        private static void EventOnSalaryDecreaased(object? sender, decimal salary)
+        private static async void ThirdProcess()
         {
-            var seniorEmployee = sender as SeniorEmployee;
-            Console.WriteLine("Salary increased");
+            Console.WriteLine("Third Process begin");
+            await Task.Delay(5000);
+            Console.WriteLine("Third Process stop");
         }
 
-        private static void EventOnSalaryIncreaased(object? sender, decimal salary)
+        private static async void SecondProcess()
         {
-            var seniorEmployee = sender as SeniorEmployee;
-            Console.WriteLine("Salary decreased");
+            Console.WriteLine("Second Process begin");
+            await Task.Delay(10000);
+            Console.WriteLine("Second Process stop");
         }
+
+        private static void FirstProcess()
+        {
+            Console.WriteLine("First Process begin");
+            Console.WriteLine("First Process stop");
+        }
+
+        //private static void EventOnExperienceDecreased(object? sender, int e)
+        //{
+        //    var juniorEmployee = sender as JuniorEmployee;
+        //    Console.WriteLine("Experience increased");
+        //}
+
+        //private static void EventOnExperienceIncreased(object? sender, int e)
+        //{
+        //    var juniorEmployee = sender as JuniorEmployee;
+        //    Console.WriteLine("Experience decreased");
+        //}
+
+        //private static void EventOnSalaryDecreaased(object? sender, decimal salary)
+        //{
+        //    var seniorEmployee = sender as SeniorEmployee;
+        //    Console.WriteLine("Salary increased");
+        //}
+
+        //private static void EventOnSalaryIncreaased(object? sender, decimal salary)
+        //{
+        //    var seniorEmployee = sender as SeniorEmployee;
+        //    Console.WriteLine("Salary decreased");
+        //}
 
     }
     
