@@ -17,11 +17,9 @@ namespace CSharp_Advanced
             get { return age; }
             set { age = value; }
         }
-
         public int number { get; private set; } = 2;
-
         public static void StaticClassExample()
-        {
+        {       
             Console.WriteLine("Static class Example");
         }
     }
