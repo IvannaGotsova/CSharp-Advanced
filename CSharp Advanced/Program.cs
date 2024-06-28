@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 
 namespace CSharp_Advanced
 {
@@ -9,7 +11,22 @@ namespace CSharp_Advanced
 
         static void Main(string[] args)
         {
-            //
+
+            ////Functional Programming
+            
+            List<int> numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+            static bool isEven(int x) => x % 2 == 0;
+            static bool isOdd(int x) => x % 2 == 1;
+
+            var evenNumbers = numbers.Where(isEven).ToList();
+            var oddNumbers = numbers.Where(isOdd).ToList();
+
+            numbers.ForEach(Console.Write);
+            Console.WriteLine();
+            evenNumbers.ForEach(Console.Write);
+            Console.WriteLine();
+            oddNumbers.ForEach(Console.Write);
 
             ////yield
             //foreach (var number in GetNumbers())
