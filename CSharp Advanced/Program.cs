@@ -9,11 +9,13 @@ namespace CSharp_Advanced
 
         static void Main(string[] args)
         {
-            //yield
-            foreach (var number in GetNumbers())
-            {
-                Console.WriteLine(number);
-            }
+            //
+
+            ////yield
+            //foreach (var number in GetNumbers())
+            //{
+            //    Console.WriteLine(number);
+            //}
 
             //Asynchronous programming
 
@@ -120,41 +122,42 @@ namespace CSharp_Advanced
 
         }
 
-        private static IEnumerable<object> GetNumbers()
-        {
-            for (int i = 1; i <= 20; i++)
-            {
-                yield return i;
-            }
-        }
+        //private static IEnumerable<object> GetNumbers()
+        //{
+        //    for (int i = 1; i <= 20; i++)
+        //    {
+        //        yield return i;
+        //    }
+        //}
+
         //private static void FifthProcess()
         //{
         //    Console.WriteLine("Fifth Process begin");
         //    Console.WriteLine("Fifth Process stop");
         //}
 
-        //private static async void FourthProcess()
+        //private static async Task FourthProcess()
         //{
         //    await Task.Delay(1000);
         //    Console.WriteLine("Fourth Process begin");
         //    Console.WriteLine("Fourth Process stop");
         //}
 
-        //private static async void ThirdProcess()
+        //private static async Task ThirdProcess()
         //{
         //    Console.WriteLine("Third Process begin");
         //    await Task.Delay(5000);
         //    Console.WriteLine("Third Process stop");
         //}
 
-        //private static async void SecondProcess()
+        //private static async Task SecondProcess()
         //{
         //    Console.WriteLine("Second Process begin");
         //    await Task.Delay(10000);
         //    Console.WriteLine("Second Process stop");
         //}
 
-        //private static void FirstProcess()
+        //private static void  FirstProcess()
         //{
         //    Console.WriteLine("First Process begin");
         //    Console.WriteLine("First Process stop");
