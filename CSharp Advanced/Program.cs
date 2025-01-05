@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 
@@ -11,6 +12,15 @@ namespace CSharp_Advanced
 
         static void Main(string[] args)
         {
+            // Reflection
+
+            Animal dogReflection = new Dog();
+            MethodInfo dogClassMethodInfo = typeof(Dog).GetMethod("AnimalSayFullHello");
+            dogClassMethodInfo.Invoke(dogReflection, new object[] { });
+
+            Person personReflection = new Person();
+            MethodInfo personClassMethodInfo = typeof(Person).GetMethod("StaticClassExample");
+            personClassMethodInfo.Invoke(personReflection, new object[] { });
 
             //// Reflection - basic
 
