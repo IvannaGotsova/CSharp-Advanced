@@ -12,15 +12,15 @@ namespace CSharp_Advanced
 
         static void Main(string[] args)
         {
-            // Reflection
+            //// Reflection
 
-            Animal dogReflection = new Dog();
-            MethodInfo dogClassMethodInfo = typeof(Dog).GetMethod("AnimalSayFullHello");
-            dogClassMethodInfo.Invoke(dogReflection, new object[] { });
+            //Animal dogReflection = new Dog();
+            //MethodInfo dogClassMethodInfo = typeof(Dog).GetMethod("AnimalSayFullHello");
+            //dogClassMethodInfo.Invoke(dogReflection, new object[] { });
 
-            Person personReflection = new Person();
-            MethodInfo personClassMethodInfo = typeof(Person).GetMethod("StaticClassExample");
-            personClassMethodInfo.Invoke(personReflection, new object[] { });
+            //Person personReflection = new Person();
+            //MethodInfo personClassMethodInfo = typeof(Person).GetMethod("StaticClassExample");
+            //personClassMethodInfo.Invoke(personReflection, new object[] { });
 
             //// Reflection - basic
 
