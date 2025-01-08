@@ -14,6 +14,22 @@ namespace CSharp_Advanced
         {
             //// Reflection
 
+            Person personExample = new Person();
+
+            Type personExampleType = typeof(Person);
+
+            Console.WriteLine(personExampleType);
+
+            foreach (PropertyInfo property in personExampleType.GetProperties())
+            {
+                Console.WriteLine(property.Name);
+            }
+
+            foreach (MethodInfo method in personExampleType.GetMethods())
+            {
+                Console.WriteLine(method.Name);
+            }
+
             //Animal dogReflection = new Dog();
             //MethodInfo dogClassMethodInfo = typeof(Dog).GetMethod("AnimalSayFullHello");
             //dogClassMethodInfo.Invoke(dogReflection, new object[] { });
