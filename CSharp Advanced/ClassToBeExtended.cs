@@ -21,5 +21,30 @@ namespace CSharp_Advanced
             Console.WriteLine("Third method");
 
         }
+
+        public void AddOne(int number)
+        {
+            Console.WriteLine(number + 1);
+        }
+
+        public void AddTwo(int number)
+        {
+            Console.WriteLine(number + 2);
+        }
+
+        public void AddThree(int number)
+        {
+            Console.WriteLine(number + 3);
+        }
+
+        public void AddFour(int number)
+        {
+            Console.WriteLine(number + 4);
+        }
+
+        public void AddFive(int number)
+        {
+            Console.WriteLine(number + 5);
+        }
     }
 }
