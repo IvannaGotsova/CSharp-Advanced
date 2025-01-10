@@ -26,6 +26,7 @@ namespace CSharp_Advanced
             classToBeExtended.AddSeven(100);
             classToBeExtended.AddEight(100);
             classToBeExtended.AddNine(100);
+            classToBeExtended.Print();
 
             //// Reflection
 
