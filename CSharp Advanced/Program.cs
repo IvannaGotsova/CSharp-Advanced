@@ -13,20 +13,20 @@ namespace CSharp_Advanced
         static void Main(string[] args)
         {
 
-            //Extension methods
+            ////Extension methods
             
-            ClassToBeExtended classToBeExtended = new ClassToBeExtended();
+            //ClassToBeExtended classToBeExtended = new ClassToBeExtended();
 
-            classToBeExtended.AddOne(100);
-            classToBeExtended.AddTwo(100);
-            classToBeExtended.AddThree(100);
-            classToBeExtended.AddFour(100);
-            classToBeExtended.AddFive(100);
-            classToBeExtended.AddSix(100);
-            classToBeExtended.AddSeven(100);
-            classToBeExtended.AddEight(100);
-            classToBeExtended.AddNine(100);
-            classToBeExtended.Print();
+            //classToBeExtended.AddOne(100);
+            //classToBeExtended.AddTwo(100);
+            //classToBeExtended.AddThree(100);
+            //classToBeExtended.AddFour(100);
+            //classToBeExtended.AddFive(100);
+            //classToBeExtended.AddSix(100);
+            //classToBeExtended.AddSeven(100);
+            //classToBeExtended.AddEight(100);
+            //classToBeExtended.AddNine(100);
+            //classToBeExtended.Print();
 
             //// Reflection
 
