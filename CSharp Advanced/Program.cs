@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace CSharp_Advanced
 {
@@ -12,9 +13,9 @@ namespace CSharp_Advanced
 
         static void Main(string[] args)
         {
-
-            ////Extension methods
             
+            ////Extension methods
+
             //ClassToBeExtended classToBeExtended = new ClassToBeExtended();
 
             //classToBeExtended.AddOne(100);
