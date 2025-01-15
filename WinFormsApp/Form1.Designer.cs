@@ -70,6 +70,7 @@
             button3.TabIndex = 2;
             button3.Text = "button3";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
@@ -79,6 +80,7 @@
             button4.TabIndex = 3;
             button4.Text = "button4";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // label1
             // 
@@ -108,6 +110,7 @@
             label3.Size = new Size(103, 15);
             label3.TabIndex = 6;
             label3.Text = "Click third button!";
+            label3.Click += label3_Click;
             // 
             // label4
             // 
@@ -117,6 +120,7 @@
             label4.Size = new Size(111, 15);
             label4.TabIndex = 7;
             label4.Text = "Click fourth button!";
+            label4.Click += label4_Click;
             // 
             // textBox1
             // 
@@ -124,6 +128,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(198, 23);
             textBox1.TabIndex = 8;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox2
             // 
@@ -131,6 +136,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(198, 23);
             textBox2.TabIndex = 9;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // textBox3
             // 
@@ -138,6 +144,7 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(198, 23);
             textBox3.TabIndex = 10;
+            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // textBox4
             // 
@@ -145,6 +152,7 @@
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(198, 23);
             textBox4.TabIndex = 11;
+            textBox4.TextChanged += textBox4_TextChanged;
             // 
             // Form1
             // 
