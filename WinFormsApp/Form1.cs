@@ -29,22 +29,22 @@ namespace WinFormsApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            textBox1.Text = "Clicked button one!";
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            textBox2.Text = "Clicked button two!";
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            textBox3.Text = "Clicked button three!";
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            textBox4.Text = "Clicked button four!";
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
