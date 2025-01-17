@@ -66,5 +66,26 @@ namespace WinFormsApp
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = " ";
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = " ";
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            textBox3.Text = " ";
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            textBox4.Text = " ";
+        }
+
     }
 }
