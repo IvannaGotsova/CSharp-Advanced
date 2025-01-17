@@ -167,6 +167,7 @@
             button5.Text = "clear";
             button5.UseVisualStyleBackColor = true;
             button5.Click += button5_Click;
+            button5.Enabled = false;
             // 
             // button6
             // 
@@ -177,6 +178,7 @@
             button6.Text = "clear";
             button6.UseVisualStyleBackColor = true;
             button6.Click += button6_Click;
+            button6.Enabled = false;
             // 
             // button7
             // 
@@ -187,6 +189,7 @@
             button7.Text = "clear";
             button7.UseVisualStyleBackColor = true;
             button7.Click += button7_Click;
+            button7.Enabled = false;
             // 
             // button8
             // 
@@ -197,6 +200,7 @@
             button8.Text = "clear";
             button8.UseVisualStyleBackColor = true;
             button8.Click += button8_Click;
+            button8.Enabled = false;
 
             // 
             // Form1
