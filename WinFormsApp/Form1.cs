@@ -32,6 +32,7 @@ namespace WinFormsApp
             textBox1.Text = "Clicked button one!";
             button1.Enabled = false;
             button5.Enabled = true;
+            label1.Text = "Clicked!";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -39,6 +40,7 @@ namespace WinFormsApp
             textBox2.Text = "Clicked button two!";
             button2.Enabled = false;
             button6.Enabled = true;
+            label2.Text = "Clicked!";
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -46,6 +48,7 @@ namespace WinFormsApp
             textBox3.Text = "Clicked button three!";
             button3.Enabled = false;
             button7.Enabled = true;
+            label3.Text = "Clicked!";
         }
         
         private void button4_Click(object sender, EventArgs e)
@@ -53,6 +56,7 @@ namespace WinFormsApp
             textBox4.Text = "Clicked button four!";
             button4.Enabled = false;
             button8.Enabled = true;
+            label4.Text = "Clicked!";
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -80,6 +84,7 @@ namespace WinFormsApp
             textBox1.Text = " ";
             button1.Enabled = true;
             button5.Enabled = false;
+            label1.Text = "Clicked button one!";
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -87,6 +92,7 @@ namespace WinFormsApp
             textBox2.Text = " ";
             button2.Enabled = true;
             button6.Enabled = false;
+            label2.Text = "Clicked button two!";
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -94,6 +100,7 @@ namespace WinFormsApp
             textBox3.Text = " ";
             button3.Enabled = true;
             button7.Enabled = false;
+            label3.Text = "Clicked button three!";
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -101,6 +108,7 @@ namespace WinFormsApp
             textBox4.Text = " ";
             button4.Enabled = true;
             button8.Enabled = false;
+            label4.Text = "Clicked button four!";
         }
 
     }
