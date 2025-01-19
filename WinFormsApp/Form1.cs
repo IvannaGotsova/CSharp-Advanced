@@ -33,6 +33,8 @@ namespace WinFormsApp
             button1.Enabled = false;
             button5.Enabled = true;
             label1.Text = "Clicked!";
+            Form2 formButtonOne = new Form2();
+            formButtonOne.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -41,6 +43,8 @@ namespace WinFormsApp
             button2.Enabled = false;
             button6.Enabled = true;
             label2.Text = "Clicked!";
+            Form3 formButtonTwo = new Form3();
+            formButtonTwo.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -49,6 +53,8 @@ namespace WinFormsApp
             button3.Enabled = false;
             button7.Enabled = true;
             label3.Text = "Clicked!";
+            Form4 formButtonThree = new Form4();
+            formButtonThree.ShowDialog();
         }
         
         private void button4_Click(object sender, EventArgs e)
@@ -57,6 +63,8 @@ namespace WinFormsApp
             button4.Enabled = false;
             button8.Enabled = true;
             label4.Text = "Clicked!";
+            Form5 formButtonFour = new Form5();
+            formButtonFour.ShowDialog();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
