@@ -16,5 +16,38 @@ namespace WinFormsApp
         {
             InitializeComponent();
         }
+
+        int firstNumber;
+        int secondNumber;
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            textBox3.Text = (firstNumber + secondNumber).ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            firstNumber = int.Parse(textBox1.Text);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            secondNumber = int.Parse(textBox2.Text);
+        }
     }
 }
