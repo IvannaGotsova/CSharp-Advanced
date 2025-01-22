@@ -16,5 +16,18 @@ namespace WinFormsApp
         {
             InitializeComponent();
         }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) 
+            { 
+                if (textBox1.Text != "STOP") 
+                { 
+                    textBox2.Text = "NO"; 
+                } 
+                else 
+                { textBox2.Text = "YES"; } 
+            }
+        }
     }
 }
