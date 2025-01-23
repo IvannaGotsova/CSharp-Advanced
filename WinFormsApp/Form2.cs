@@ -42,12 +42,26 @@ namespace WinFormsApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            firstNumber = int.Parse(textBox1.Text);
+            if (int.TryParse(textBox1.Text, out firstNumber))
+            {
+                firstNumber = int.Parse(textBox1.Text);
+            }
+            else
+            {
+                textBox1.Text = "Enter Number!";
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            secondNumber = int.Parse(textBox2.Text);
+            if (int.TryParse(textBox2.Text, out secondNumber))
+            {
+                secondNumber = int.Parse(textBox2.Text);
+            }
+            else
+            {
+                textBox2.Text = "Enter Number!";
+            }          
         }
     }
 }
