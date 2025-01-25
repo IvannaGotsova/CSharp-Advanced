@@ -19,7 +19,14 @@ namespace WinFormsApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            textBox6.Text = $"The full name is {textBox1.Text} {textBox2.Text} {textBox3.Text}. the age is {textBox4.Text}. The city is {textBox5.Text}.";
+            if (int.Parse(textBox4.Text) >= 18)
+            {
+                textBox6.Text = $"The full name is {textBox1.Text} {textBox2.Text} {textBox3.Text}. the age is {textBox4.Text}. The city is {textBox5.Text}.";
+            }
+            else
+            {
+                textBox4.Text = "Enter age";
+            }
         }
     }
 }
