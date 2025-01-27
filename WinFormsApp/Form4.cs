@@ -23,7 +23,22 @@ namespace WinFormsApp
            
             for (int i = 1; i <= number; i++)
             {
-                textBox2.Text += i.ToString() + " ";
+                if (number % 2 == 0)
+                {
+                    if (i % 2 == 0)
+                    {
+                        textBox2.Text += i.ToString() + " ";
+                    }
+                }
+                else
+                {
+                    if (i % 2 != 0)
+                    {
+                        textBox2.Text += i.ToString() + " ";
+                    }
+                }
+
+               
             }
 
         }
