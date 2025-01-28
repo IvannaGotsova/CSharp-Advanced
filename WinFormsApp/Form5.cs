@@ -21,7 +21,7 @@ namespace WinFormsApp
         {
             if (e.KeyCode == Keys.Enter) 
             { 
-                if (textBox1.Text != "STOP") 
+                if (textBox1.Text != "STOP" || textBox1.Text != "stop") 
                 { 
                     textBox2.Text = "NO"; 
                 } 
