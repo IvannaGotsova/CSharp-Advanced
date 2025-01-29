@@ -44,6 +44,10 @@
             button6 = new Button();
             button7 = new Button();
             button8 = new Button();
+            button9 = new Button();
+            button10 = new Button();
+            label5 = new Label();
+            textBox5 = new TextBox();
             SuspendLayout();
             // 
             // button1
@@ -160,6 +164,7 @@
             // 
             // button5
             // 
+            button5.Enabled = false;
             button5.Location = new Point(451, 5);
             button5.Name = "button5";
             button5.Size = new Size(75, 23);
@@ -167,10 +172,10 @@
             button5.Text = "clear";
             button5.UseVisualStyleBackColor = true;
             button5.Click += button5_Click;
-            button5.Enabled = false;
             // 
             // button6
             // 
+            button6.Enabled = false;
             button6.Location = new Point(451, 68);
             button6.Name = "button6";
             button6.Size = new Size(75, 23);
@@ -178,10 +183,10 @@
             button6.Text = "clear";
             button6.UseVisualStyleBackColor = true;
             button6.Click += button6_Click;
-            button6.Enabled = false;
             // 
             // button7
             // 
+            button7.Enabled = false;
             button7.Location = new Point(451, 138);
             button7.Name = "button7";
             button7.Size = new Size(75, 23);
@@ -189,10 +194,10 @@
             button7.Text = "clear";
             button7.UseVisualStyleBackColor = true;
             button7.Click += button7_Click;
-            button7.Enabled = false;
             // 
             // button8
             // 
+            button8.Enabled = false;
             button8.Location = new Point(451, 202);
             button8.Name = "button8";
             button8.Size = new Size(75, 23);
@@ -200,14 +205,50 @@
             button8.Text = "clear";
             button8.UseVisualStyleBackColor = true;
             button8.Click += button8_Click;
-            button8.Enabled = false;
-
+            // 
+            // button9
+            // 
+            button9.Location = new Point(129, 265);
+            button9.Name = "button9";
+            button9.Size = new Size(75, 23);
+            button9.TabIndex = 16;
+            button9.Text = "button9";
+            button9.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            button10.Location = new Point(451, 265);
+            button10.Name = "button10";
+            button10.Size = new Size(75, 23);
+            button10.TabIndex = 17;
+            button10.Text = "button10";
+            button10.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(12, 273);
+            label5.Name = "label5";
+            label5.Size = new Size(38, 15);
+            label5.TabIndex = 18;
+            label5.Text = "label5";
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(228, 265);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(198, 23);
+            textBox5.TabIndex = 19;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(textBox5);
+            Controls.Add(label5);
+            Controls.Add(button10);
+            Controls.Add(button9);
             Controls.Add(button8);
             Controls.Add(button7);
             Controls.Add(button6);
@@ -248,5 +289,9 @@
         private Button button6;
         private Button button7;
         private Button button8;
+        private Button button9;
+        private Button button10;
+        private Label label5;
+        private TextBox textBox5;
     }
 }
