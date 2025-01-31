@@ -56,7 +56,7 @@
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 0;
-            button1.Text = "button1";
+            button1.Text = "click";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -66,7 +66,7 @@
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 1;
-            button2.Text = "button2";
+            button2.Text = "click";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
@@ -76,7 +76,7 @@
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 2;
-            button3.Text = "button3";
+            button3.Text = "click";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
@@ -86,7 +86,7 @@
             button4.Name = "button4";
             button4.Size = new Size(75, 23);
             button4.TabIndex = 3;
-            button4.Text = "button4";
+            button4.Text = "click";
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
@@ -212,8 +212,9 @@
             button9.Name = "button9";
             button9.Size = new Size(75, 23);
             button9.TabIndex = 16;
-            button9.Text = "button9";
+            button9.Text = "click";
             button9.UseVisualStyleBackColor = true;
+            button9.Click += button9_Click;
             // 
             // button10
             // 
@@ -221,17 +222,19 @@
             button10.Name = "button10";
             button10.Size = new Size(75, 23);
             button10.TabIndex = 17;
-            button10.Text = "button10";
+            button10.Text = "clear";
             button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Location = new Point(12, 273);
             label5.Name = "label5";
-            label5.Size = new Size(38, 15);
+            label5.Size = new Size(111, 15);
             label5.TabIndex = 18;
-            label5.Text = "label5";
+            label5.Text = "Click fourth button!";
+            label5.Click += label5_Click;
             // 
             // textBox5
             // 
@@ -239,6 +242,7 @@
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(198, 23);
             textBox5.TabIndex = 19;
+            textBox5.TextChanged += textBox5_TextChanged;
             // 
             // Form1
             // 

@@ -27,6 +27,11 @@ namespace WinFormsApp
 
         }
 
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             textBox1.Text = "Clicked button one!";
@@ -56,7 +61,7 @@ namespace WinFormsApp
             Form4 formButtonThree = new Form4();
             formButtonThree.ShowDialog();
         }
-        
+
         private void button4_Click(object sender, EventArgs e)
         {
             textBox4.Text = "Clicked button four!";
@@ -65,6 +70,11 @@ namespace WinFormsApp
             label4.Text = "Clicked!";
             Form5 formButtonFour = new Form5();
             formButtonFour.ShowDialog();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -78,6 +88,11 @@ namespace WinFormsApp
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -118,6 +133,9 @@ namespace WinFormsApp
             button8.Enabled = false;
             label4.Text = "Clicked button four!";
         }
+        private void button10_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
