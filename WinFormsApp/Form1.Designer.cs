@@ -231,9 +231,9 @@
             label5.AutoSize = true;
             label5.Location = new Point(12, 273);
             label5.Name = "label5";
-            label5.Size = new Size(111, 15);
+            label5.Size = new Size(100, 15);
             label5.TabIndex = 18;
-            label5.Text = "Click fourth button!";
+            label5.Text = "Click fifth button!";
             label5.Click += label5_Click;
             // 
             // textBox5
