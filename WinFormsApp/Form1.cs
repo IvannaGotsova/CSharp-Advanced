@@ -74,7 +74,12 @@ namespace WinFormsApp
 
         private void button9_Click(object sender, EventArgs e)
         {
-
+            textBox5.Text = "Clicked button five!";
+            button5.Enabled = false;
+            button10.Enabled = true;
+            label5.Text = "Clicked!";
+            Form6 formButtonFive = new Form6();
+            formButtonFive.ShowDialog();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -135,7 +140,10 @@ namespace WinFormsApp
         }
         private void button10_Click(object sender, EventArgs e)
         {
-
+            textBox5.Text = " ";
+            button5.Enabled = true;
+            button10.Enabled = false;
+            label5.Text = "Clicked button five!";
         }
     }
 }
