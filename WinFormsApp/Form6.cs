@@ -16,5 +16,40 @@ namespace WinFormsApp
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int number = int.Parse(textBox1.Text);
+
+            if (number >= 18)
+            {
+                textBox2.Text = "YES";
+            }
+            else
+            {
+                textBox2.Text = "NO";
+            }
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
