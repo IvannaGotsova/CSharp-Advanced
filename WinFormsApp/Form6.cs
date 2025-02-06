@@ -21,13 +21,17 @@ namespace WinFormsApp
         {
             int number = int.Parse(textBox1.Text);
 
-            if (number >= 18)
+            if (number >= 0 && number < 18) 
+            {
+                textBox2.Text = "NO";
+            }
+            else if (number >= 18 && number <= 111)
             {
                 textBox2.Text = "YES";
             }
             else
             {
-                textBox2.Text = "NO";
+                textBox2.Text = "TRY";
             }
 
         }
