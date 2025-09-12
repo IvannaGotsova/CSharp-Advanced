@@ -13,25 +13,34 @@ namespace CSharp_Advanced
 
         static void Main(string[] args)
         {
-            //Class, Struct, Record 
+            //NULL
+            int? number = null;
+            string? text = null;
 
-            ClassStructRecord classStructRecord = new ClassStructRecord();
-            Console.WriteLine(classStructRecord.example);
-            Console.WriteLine(classStructRecord.number);
-            classStructRecord.number = 3;
-            Console.WriteLine(classStructRecord.number);
+            string example = null;
+            string exampleCheck = example ?? "Example";
+            Console.WriteLine(exampleCheck);
 
-            Struct structRecord = new Struct();
-            Console.WriteLine(structRecord.example);
-            Console.WriteLine(structRecord.number);
-            structRecord.number = 4;
-            Console.WriteLine(structRecord.number);
 
-            Record record = new Record();
-            Console.WriteLine(record.example);
-            Console.WriteLine(record.number);
-            record.number = 5; 
-            Console.WriteLine(record.number);
+            ////Class, Struct, Record 
+
+            //ClassStructRecord classStructRecord = new ClassStructRecord();
+            //Console.WriteLine(classStructRecord.example);
+            //Console.WriteLine(classStructRecord.number);
+            //classStructRecord.number = 3;
+            //Console.WriteLine(classStructRecord.number);
+
+            //Struct structRecord = new Struct();
+            //Console.WriteLine(structRecord.example);
+            //Console.WriteLine(structRecord.number);
+            //structRecord.number = 4;
+            //Console.WriteLine(structRecord.number);
+
+            //Record record = new Record();
+            //Console.WriteLine(record.example);
+            //Console.WriteLine(record.number);
+            //record.number = 5; 
+            //Console.WriteLine(record.number);
 
 
             //default
