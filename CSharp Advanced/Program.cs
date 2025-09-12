@@ -13,10 +13,24 @@ namespace CSharp_Advanced
 
         static void Main(string[] args)
         {
+            //Span
 
-            //Method Extension
+            int[] numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            Span<int> spaNumbers = new Span<int>(numbers, 1, 9);
 
-            Console.WriteLine(ToStringExtensions.ToStringExtension());
+            foreach (var item in numbers)
+            {
+                Console.WriteLine("numbers - " + item);
+            }
+
+            foreach (var item in spaNumbers)
+            {
+                Console.WriteLine("Span numbers - " + item);
+            }
+
+            ////Method Extension
+
+            //Console.WriteLine(ToStringExtensions.ToStringExtension());
 
             ////Reflection
 
@@ -272,11 +286,11 @@ namespace CSharp_Advanced
 
     }
 
-    public static class ToStringExtensions
-    {
-        public static string ToStringExtension()
-        {
-            return "To String Extension Method";
-        }
-    }
+    //public static class ToStringExtensions
+    //{
+    //    public static string ToStringExtension()
+    //    {
+    //        return "To String Extension Method";
+    //    }
+    //}
 }
