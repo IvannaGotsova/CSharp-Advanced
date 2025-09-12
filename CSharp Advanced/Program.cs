@@ -13,9 +13,26 @@ namespace CSharp_Advanced
 
         static void Main(string[] args)
         {
+            //Class, Struct, Record 
 
-            //Static constructor
-            Person person = new Person();
+
+
+            //default
+
+            string exampleString = default;
+            int exampleInt= default;
+            double exampleDouble = default;
+            decimal exampleDecimal = default;
+            float exampleFloat = default;
+
+            Console.WriteLine(exampleString);
+            Console.WriteLine(exampleInt);
+            Console.WriteLine(exampleDouble);
+            Console.WriteLine(exampleDecimal);
+            Console.WriteLine(exampleFloat);
+
+            ////Static constructor
+            //Person person = new Person();
 
             ////typeof, sizeof, nameof 
 
