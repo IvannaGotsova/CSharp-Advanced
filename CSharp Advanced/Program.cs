@@ -20,6 +20,9 @@ namespace CSharp_Advanced
             string example = null;
             string exampleCheck = example ?? "Example";
             Console.WriteLine(exampleCheck);
+            example = "Not NULL";
+            exampleCheck = example ?? "Example";
+            Console.WriteLine(exampleCheck);
 
 
             ////Class, Struct, Record 
