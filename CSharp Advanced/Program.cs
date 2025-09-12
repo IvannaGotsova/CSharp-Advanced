@@ -13,20 +13,27 @@ namespace CSharp_Advanced
 
         static void Main(string[] args)
         {
-            //Span
+            //typeof, sizeof, nameof 
 
-            int[] numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-            Span<int> spaNumbers = new Span<int>(numbers, 1, 9);
+            Person person = new Person();
+            Console.WriteLine(typeof(Person));
+            Console.WriteLine(nameof(person));
+            Console.WriteLine(sizeof(byte));
 
-            foreach (var item in numbers)
-            {
-                Console.WriteLine("numbers - " + item);
-            }
+            ////Span
 
-            foreach (var item in spaNumbers)
-            {
-                Console.WriteLine("Span numbers - " + item);
-            }
+            //int[] numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            //Span<int> spaNumbers = new Span<int>(numbers, 1, 9);
+
+            //foreach (var item in numbers)
+            //{
+            //    Console.WriteLine("numbers - " + item);
+            //}
+
+            //foreach (var item in spaNumbers)
+            //{
+            //    Console.WriteLine("Span numbers - " + item);
+            //}
 
             ////Method Extension
 
