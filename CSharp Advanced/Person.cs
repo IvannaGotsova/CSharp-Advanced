@@ -12,6 +12,11 @@ namespace CSharp_Advanced
         public string lastName;
         private int age;
         public static string signature = "Person Test";
+
+        static Person() 
+        {
+            Console.WriteLine("This is Person static constructor");
+        }
         public int Age
         {
             get { return age; }

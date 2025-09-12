@@ -13,12 +13,16 @@ namespace CSharp_Advanced
 
         static void Main(string[] args)
         {
-            //typeof, sizeof, nameof 
 
+            //Static constructor
             Person person = new Person();
-            Console.WriteLine(typeof(Person));
-            Console.WriteLine(nameof(person));
-            Console.WriteLine(sizeof(byte));
+
+            ////typeof, sizeof, nameof 
+
+            //Person person = new Person();
+            //Console.WriteLine(typeof(Person));
+            //Console.WriteLine(nameof(person));
+            //Console.WriteLine(sizeof(byte));
 
             ////Span
 
