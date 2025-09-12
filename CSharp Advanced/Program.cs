@@ -13,16 +13,21 @@ namespace CSharp_Advanced
 
         static void Main(string[] args)
         {
-            //Reflection
 
-            ReflectionExample reflectionExample = new ReflectionExample();
-            reflectionExample.ReflectionExampleMethdod();
+            //Method Extension
 
-            Type reflectionExampleType = typeof(ReflectionExample);
-            object reflectionExampleInstance = Activator.CreateInstance(reflectionExampleType);
-            MethodInfo reflectionExampleMethodInfo = reflectionExampleType.GetMethod("ReflectionExampleMethdod");
-            Console.WriteLine(reflectionExampleMethodInfo);
-            reflectionExampleMethodInfo.Invoke(reflectionExampleInstance, null);
+            Console.WriteLine(ToStringExtensions.ToStringExtension());
+
+            ////Reflection
+
+            //ReflectionExample reflectionExample = new ReflectionExample();
+            //reflectionExample.ReflectionExampleMethdod();
+
+            //Type reflectionExampleType = typeof(ReflectionExample);
+            //object reflectionExampleInstance = Activator.CreateInstance(reflectionExampleType);
+            //MethodInfo reflectionExampleMethodInfo = reflectionExampleType.GetMethod("ReflectionExampleMethdod");
+            //Console.WriteLine(reflectionExampleMethodInfo);
+            //reflectionExampleMethodInfo.Invoke(reflectionExampleInstance, null);
 
 
 
@@ -267,4 +272,11 @@ namespace CSharp_Advanced
 
     }
 
+    public static class ToStringExtensions
+    {
+        public static string ToStringExtension()
+        {
+            return "To String Extension Method";
+        }
     }
+}
