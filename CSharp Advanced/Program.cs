@@ -13,7 +13,19 @@ namespace CSharp_Advanced
 
         static void Main(string[] args)
         {
-            
+            //Reflection
+
+            ReflectionExample reflectionExample = new ReflectionExample();
+            reflectionExample.ReflectionExampleMethdod();
+
+            Type reflectionExampleType = typeof(ReflectionExample);
+            object reflectionExampleInstance = Activator.CreateInstance(reflectionExampleType);
+            MethodInfo reflectionExampleMethodInfo = reflectionExampleType.GetMethod("ReflectionExampleMethdod");
+            Console.WriteLine(reflectionExampleMethodInfo);
+            reflectionExampleMethodInfo.Invoke(reflectionExampleInstance, null);
+
+
+
             ////Extension methods
 
             //ClassToBeExtended classToBeExtended = new ClassToBeExtended();
