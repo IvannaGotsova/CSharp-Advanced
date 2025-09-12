@@ -15,21 +15,38 @@ namespace CSharp_Advanced
         {
             //Class, Struct, Record 
 
+            ClassStructRecord classStructRecord = new ClassStructRecord();
+            Console.WriteLine(classStructRecord.example);
+            Console.WriteLine(classStructRecord.number);
+            classStructRecord.number = 3;
+            Console.WriteLine(classStructRecord.number);
+
+            Struct structRecord = new Struct();
+            Console.WriteLine(structRecord.example);
+            Console.WriteLine(structRecord.number);
+            structRecord.number = 4;
+            Console.WriteLine(structRecord.number);
+
+            Record record = new Record();
+            Console.WriteLine(record.example);
+            Console.WriteLine(record.number);
+            record.number = 5; 
+            Console.WriteLine(record.number);
 
 
             //default
 
-            string exampleString = default;
-            int exampleInt= default;
-            double exampleDouble = default;
-            decimal exampleDecimal = default;
-            float exampleFloat = default;
+            //string exampleString = default;
+            //int exampleInt= default;
+            //double exampleDouble = default;
+            //decimal exampleDecimal = default;
+            //float exampleFloat = default;
 
-            Console.WriteLine(exampleString);
-            Console.WriteLine(exampleInt);
-            Console.WriteLine(exampleDouble);
-            Console.WriteLine(exampleDecimal);
-            Console.WriteLine(exampleFloat);
+            //Console.WriteLine(exampleString);
+            //Console.WriteLine(exampleInt);
+            //Console.WriteLine(exampleDouble);
+            //Console.WriteLine(exampleDecimal);
+            //Console.WriteLine(exampleFloat);
 
             ////Static constructor
             //Person person = new Person();
