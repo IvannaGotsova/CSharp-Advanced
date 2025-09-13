@@ -11,270 +11,288 @@ namespace CSharp_Advanced
     {
         //public delegate void MyDelegateExample(string delegateStringExample);
 
+        [Flags]
+        enum Colors 
+        {
+            None = 0,
+            Black = 1,
+            Red = 2,
+            Green = 4,
+            Blue = 8,
+            White = 16,
+            Orange = 32
+        };
+
         static void Main(string[] args)
         {
-            //NULL
-            int? number = null;
-            string? text = null;
+            //Enum Flags
 
-            string example = null;
-            string exampleCheck = example ?? "Example";
-            Console.WriteLine(exampleCheck);
-            example = "Not NULL";
-            exampleCheck = example ?? "Example";
-            Console.WriteLine(exampleCheck);
+            Colors multicolor = Colors.Black | Colors.Green | Colors.White;
+            Console.WriteLine(multicolor);
 
 
-            ////Class, Struct, Record 
+        ////NULL
+        //int? number = null;
+        //string? text = null;
 
-            //ClassStructRecord classStructRecord = new ClassStructRecord();
-            //Console.WriteLine(classStructRecord.example);
-            //Console.WriteLine(classStructRecord.number);
-            //classStructRecord.number = 3;
-            //Console.WriteLine(classStructRecord.number);
-
-            //Struct structRecord = new Struct();
-            //Console.WriteLine(structRecord.example);
-            //Console.WriteLine(structRecord.number);
-            //structRecord.number = 4;
-            //Console.WriteLine(structRecord.number);
-
-            //Record record = new Record();
-            //Console.WriteLine(record.example);
-            //Console.WriteLine(record.number);
-            //record.number = 5; 
-            //Console.WriteLine(record.number);
+        //string example = null;
+        //string exampleCheck = example ?? "Example";
+        //Console.WriteLine(exampleCheck);
+        //example = "Not NULL";
+        //exampleCheck = example ?? "Example";
+        //Console.WriteLine(exampleCheck);
 
 
-            //default
+        ////Class, Struct, Record 
 
-            //string exampleString = default;
-            //int exampleInt= default;
-            //double exampleDouble = default;
-            //decimal exampleDecimal = default;
-            //float exampleFloat = default;
+        //ClassStructRecord classStructRecord = new ClassStructRecord();
+        //Console.WriteLine(classStructRecord.example);
+        //Console.WriteLine(classStructRecord.number);
+        //classStructRecord.number = 3;
+        //Console.WriteLine(classStructRecord.number);
 
-            //Console.WriteLine(exampleString);
-            //Console.WriteLine(exampleInt);
-            //Console.WriteLine(exampleDouble);
-            //Console.WriteLine(exampleDecimal);
-            //Console.WriteLine(exampleFloat);
+        //Struct structRecord = new Struct();
+        //Console.WriteLine(structRecord.example);
+        //Console.WriteLine(structRecord.number);
+        //structRecord.number = 4;
+        //Console.WriteLine(structRecord.number);
 
-            ////Static constructor
-            //Person person = new Person();
-
-            ////typeof, sizeof, nameof 
-
-            //Person person = new Person();
-            //Console.WriteLine(typeof(Person));
-            //Console.WriteLine(nameof(person));
-            //Console.WriteLine(sizeof(byte));
-
-            ////Span
-
-            //int[] numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-            //Span<int> spaNumbers = new Span<int>(numbers, 1, 9);
-
-            //foreach (var item in numbers)
-            //{
-            //    Console.WriteLine("numbers - " + item);
-            //}
-
-            //foreach (var item in spaNumbers)
-            //{
-            //    Console.WriteLine("Span numbers - " + item);
-            //}
-
-            ////Method Extension
-
-            //Console.WriteLine(ToStringExtensions.ToStringExtension());
-
-            ////Reflection
-
-            //ReflectionExample reflectionExample = new ReflectionExample();
-            //reflectionExample.ReflectionExampleMethdod();
-
-            //Type reflectionExampleType = typeof(ReflectionExample);
-            //object reflectionExampleInstance = Activator.CreateInstance(reflectionExampleType);
-            //MethodInfo reflectionExampleMethodInfo = reflectionExampleType.GetMethod("ReflectionExampleMethdod");
-            //Console.WriteLine(reflectionExampleMethodInfo);
-            //reflectionExampleMethodInfo.Invoke(reflectionExampleInstance, null);
+        //Record record = new Record();
+        //Console.WriteLine(record.example);
+        //Console.WriteLine(record.number);
+        //record.number = 5; 
+        //Console.WriteLine(record.number);
 
 
+        //default
 
-            ////Extension methods
+        //string exampleString = default;
+        //int exampleInt= default;
+        //double exampleDouble = default;
+        //decimal exampleDecimal = default;
+        //float exampleFloat = default;
 
-            //ClassToBeExtended classToBeExtended = new ClassToBeExtended();
+        //Console.WriteLine(exampleString);
+        //Console.WriteLine(exampleInt);
+        //Console.WriteLine(exampleDouble);
+        //Console.WriteLine(exampleDecimal);
+        //Console.WriteLine(exampleFloat);
 
-            //classToBeExtended.AddOne(100);
-            //classToBeExtended.AddTwo(100);
-            //classToBeExtended.AddThree(100);
-            //classToBeExtended.AddFour(100);
-            //classToBeExtended.AddFive(100);
-            //classToBeExtended.AddSix(100);
-            //classToBeExtended.AddSeven(100);
-            //classToBeExtended.AddEight(100);
-            //classToBeExtended.AddNine(100);
-            //classToBeExtended.Print();
+        ////Static constructor
+        //Person person = new Person();
 
-            //// Reflection
+        ////typeof, sizeof, nameof 
 
-            //Person personExample = new Person();
+        //Person person = new Person();
+        //Console.WriteLine(typeof(Person));
+        //Console.WriteLine(nameof(person));
+        //Console.WriteLine(sizeof(byte));
 
-            //Type personExampleType = typeof(Person);
+        ////Span
 
-            //Console.WriteLine(personExampleType);
+        //int[] numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        //Span<int> spaNumbers = new Span<int>(numbers, 1, 9);
 
-            //foreach (PropertyInfo property in personExampleType.GetProperties())
-            //{
-            //    Console.WriteLine(property.Name);
-            //}
+        //foreach (var item in numbers)
+        //{
+        //    Console.WriteLine("numbers - " + item);
+        //}
 
-            //foreach (MethodInfo method in personExampleType.GetMethods())
-            //{
-            //    Console.WriteLine(method.Name);
-            //}
+        //foreach (var item in spaNumbers)
+        //{
+        //    Console.WriteLine("Span numbers - " + item);
+        //}
 
-            //Animal dogReflection = new Dog();
-            //MethodInfo dogClassMethodInfo = typeof(Dog).GetMethod("AnimalSayFullHello");
-            //dogClassMethodInfo.Invoke(dogReflection, new object[] { });
+        ////Method Extension
 
-            //Person personReflection = new Person();
-            //MethodInfo personClassMethodInfo = typeof(Person).GetMethod("StaticClassExample");
-            //personClassMethodInfo.Invoke(personReflection, new object[] { });
+        //Console.WriteLine(ToStringExtensions.ToStringExtension());
 
-            //// Reflection - basic
+        ////Reflection
 
-            //double doubleExample = 23.78;
-            //System.Type typeExample = doubleExample.GetType();
-            //System.Console.WriteLine(typeExample);
+        //ReflectionExample reflectionExample = new ReflectionExample();
+        //reflectionExample.ReflectionExampleMethdod();
 
-            ////Functional Programming
+        //Type reflectionExampleType = typeof(ReflectionExample);
+        //object reflectionExampleInstance = Activator.CreateInstance(reflectionExampleType);
+        //MethodInfo reflectionExampleMethodInfo = reflectionExampleType.GetMethod("ReflectionExampleMethdod");
+        //Console.WriteLine(reflectionExampleMethodInfo);
+        //reflectionExampleMethodInfo.Invoke(reflectionExampleInstance, null);
 
-            //List<int> numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-            //static bool isEven(int x) => x % 2 == 0;
-            //static bool isOdd(int x) => x % 2 == 1;
 
-            //var evenNumbers = numbers.Where(isEven).ToList();
-            //var oddNumbers = numbers.Where(isOdd).ToList();
+        ////Extension methods
 
-            //numbers.ForEach(Console.Write);
-            //Console.WriteLine();
-            //evenNumbers.ForEach(Console.Write);
-            //Console.WriteLine();
-            //oddNumbers.ForEach(Console.Write);
+        //ClassToBeExtended classToBeExtended = new ClassToBeExtended();
 
-            ////yield
-            //foreach (var number in GetNumbers())
-            //{
-            //    Console.WriteLine(number);
-            //}
+        //classToBeExtended.AddOne(100);
+        //classToBeExtended.AddTwo(100);
+        //classToBeExtended.AddThree(100);
+        //classToBeExtended.AddFour(100);
+        //classToBeExtended.AddFive(100);
+        //classToBeExtended.AddSix(100);
+        //classToBeExtended.AddSeven(100);
+        //classToBeExtended.AddEight(100);
+        //classToBeExtended.AddNine(100);
+        //classToBeExtended.Print();
 
-            //Asynchronous programming
+        //// Reflection
 
-            //FirstProcess();
-            //SecondProcess();
-            //ThirdProcess();
-            //FourthProcess();
-            //FifthProcess();
+        //Person personExample = new Person();
 
-            //Events
-            //SeniorEmployee seniorEmployee = new SeniorEmployee ();
-            //seniorEmployee.Salary = 1000;
+        //Type personExampleType = typeof(Person);
 
-            //seniorEmployee.OnSalaryIncreased += EventOnSalaryIncreaased;
-            //seniorEmployee.OnSalaryDecreased += EventOnSalaryDecreaased;
+        //Console.WriteLine(personExampleType);
 
-            //seniorEmployee.Salary = 1500;
-            //seniorEmployee.Salary = 500;
-            //seniorEmployee.Salary = 300;
-            //seniorEmployee.Salary = 500;
-            //seniorEmployee.Salary = 300;
-            //seniorEmployee.Salary = 500;
+        //foreach (PropertyInfo property in personExampleType.GetProperties())
+        //{
+        //    Console.WriteLine(property.Name);
+        //}
 
-            //JuniorEmployee juniorEmployee = new JuniorEmployee();
-            //juniorEmployee.Experience = 30;
+        //foreach (MethodInfo method in personExampleType.GetMethods())
+        //{
+        //    Console.WriteLine(method.Name);
+        //}
 
-            //juniorEmployee.OnExperienceIncreased += EventOnExperienceIncreased;
-            //juniorEmployee.OnExperienceDecreased += EventOnExperienceDecreased;
+        //Animal dogReflection = new Dog();
+        //MethodInfo dogClassMethodInfo = typeof(Dog).GetMethod("AnimalSayFullHello");
+        //dogClassMethodInfo.Invoke(dogReflection, new object[] { });
 
-            //juniorEmployee.Experience = 20;
-            //juniorEmployee.Experience = 10;
-            //juniorEmployee.Experience = 20;
-            //juniorEmployee.Experience = 30;
-            //juniorEmployee.Experience = 40;
-            //juniorEmployee.Experience = 30;
+        //Person personReflection = new Person();
+        //MethodInfo personClassMethodInfo = typeof(Person).GetMethod("StaticClassExample");
+        //personClassMethodInfo.Invoke(personReflection, new object[] { });
 
-            ////Delegates
-            //MyDelegateExample delegateExample = FirstMethodExample;
-            //delegateExample("First example");
-            //delegateExample = SecondMethodExample;
-            //delegateExample("Second example");
-            //delegateExample = ThirdMethodExample;
-            //delegateExample("Third example");
-            //delegateExample = FourthMethodExample;
-            //delegateExample("Fourth example");
-            //delegateExample = FifthMethodExample;
-            //delegateExample("Fifth example");
+        //// Reflection - basic
 
-            //static void FirstMethodExample(string example)
-            //{
-            //    Console.WriteLine(example);
-            //}
-            //static void SecondMethodExample(string example)
-            //{
-            //    Console.WriteLine(example);
-            //}
-            //static void ThirdMethodExample(string example)
-            //{
-            //    Console.WriteLine(example);
-            //}
-            //static void FourthMethodExample(string example)
-            //{
-            //    Console.WriteLine(example);
-            //}
-            //static void FifthMethodExample(string example)
-            //{
-            //    Console.WriteLine(example);
-            //}
+        //double doubleExample = 23.78;
+        //System.Type typeExample = doubleExample.GetType();
+        //System.Console.WriteLine(typeExample);
 
-            ////Generics
-            //Employee<SeniorEmployee> seniorEmployee = new Employee<SeniorEmployee>();
-            //seniorEmployee.GetFullName("Test", "Test");
-            //seniorEmployee.GetFullInfo("Test", "Test", 50);
-            //seniorEmployee.GetGreeting("Test", "Test");
-            //seniorEmployee.GetBonus(10, 10000);
-            //Employee<JuniorEmployee> juniorEmployee = new Employee<JuniorEmployee>();
-            //juniorEmployee.GetFullName("Test", "Test");
-            //juniorEmployee.GetFullInfo("Test", "Test", 30);
-            //juniorEmployee.GetGreeting("Test", "Test");
-            //juniorEmployee.GetBonus(5, 5000);
+        ////Functional Programming
 
-            ////Extension method 
-            //ClassToBeExtended classToBeExtended = new ClassToBeExtended();
-            //classToBeExtended.FourthMethod();
-            //classToBeExtended.FifthMethod();
-            //classToBeExtended.SixthMethod();
+        //List<int> numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-            ////static keyword 
-            //Person person = new Person();
-            //Console.WriteLine($"Person signature: {Person.signature}");
-            //Person.StaticClassExample();
+        //static bool isEven(int x) => x % 2 == 0;
+        //static bool isOdd(int x) => x % 2 == 1;
 
-            //// Abstraction
-            //Dog dog = new Dog();
-            //dog.AnimalSayHello();
-            //dog.AnimalSayFullHello();
+        //var evenNumbers = numbers.Where(isEven).ToList();
+        //var oddNumbers = numbers.Where(isOdd).ToList();
 
-            //// Encapsulation 
-            //Person person = new Person();
-            //string firstname = person.firstName = "test";
-            //string lastname = person.lastName = "test";
-            //int age = person.Age = 1;
-            //Console.WriteLine($"full name: {firstname} {lastname}, age: {age}, number: {person.number}");
+        //numbers.ForEach(Console.Write);
+        //Console.WriteLine();
+        //evenNumbers.ForEach(Console.Write);
+        //Console.WriteLine();
+        //oddNumbers.ForEach(Console.Write);
 
-        }
+        ////yield
+        //foreach (var number in GetNumbers())
+        //{
+        //    Console.WriteLine(number);
+        //}
+
+        //Asynchronous programming
+
+        //FirstProcess();
+        //SecondProcess();
+        //ThirdProcess();
+        //FourthProcess();
+        //FifthProcess();
+
+        //Events
+        //SeniorEmployee seniorEmployee = new SeniorEmployee ();
+        //seniorEmployee.Salary = 1000;
+
+        //seniorEmployee.OnSalaryIncreased += EventOnSalaryIncreaased;
+        //seniorEmployee.OnSalaryDecreased += EventOnSalaryDecreaased;
+
+        //seniorEmployee.Salary = 1500;
+        //seniorEmployee.Salary = 500;
+        //seniorEmployee.Salary = 300;
+        //seniorEmployee.Salary = 500;
+        //seniorEmployee.Salary = 300;
+        //seniorEmployee.Salary = 500;
+
+        //JuniorEmployee juniorEmployee = new JuniorEmployee();
+        //juniorEmployee.Experience = 30;
+
+        //juniorEmployee.OnExperienceIncreased += EventOnExperienceIncreased;
+        //juniorEmployee.OnExperienceDecreased += EventOnExperienceDecreased;
+
+        //juniorEmployee.Experience = 20;
+        //juniorEmployee.Experience = 10;
+        //juniorEmployee.Experience = 20;
+        //juniorEmployee.Experience = 30;
+        //juniorEmployee.Experience = 40;
+        //juniorEmployee.Experience = 30;
+
+        ////Delegates
+        //MyDelegateExample delegateExample = FirstMethodExample;
+        //delegateExample("First example");
+        //delegateExample = SecondMethodExample;
+        //delegateExample("Second example");
+        //delegateExample = ThirdMethodExample;
+        //delegateExample("Third example");
+        //delegateExample = FourthMethodExample;
+        //delegateExample("Fourth example");
+        //delegateExample = FifthMethodExample;
+        //delegateExample("Fifth example");
+
+        //static void FirstMethodExample(string example)
+        //{
+        //    Console.WriteLine(example);
+        //}
+        //static void SecondMethodExample(string example)
+        //{
+        //    Console.WriteLine(example);
+        //}
+        //static void ThirdMethodExample(string example)
+        //{
+        //    Console.WriteLine(example);
+        //}
+        //static void FourthMethodExample(string example)
+        //{
+        //    Console.WriteLine(example);
+        //}
+        //static void FifthMethodExample(string example)
+        //{
+        //    Console.WriteLine(example);
+        //}
+
+        ////Generics
+        //Employee<SeniorEmployee> seniorEmployee = new Employee<SeniorEmployee>();
+        //seniorEmployee.GetFullName("Test", "Test");
+        //seniorEmployee.GetFullInfo("Test", "Test", 50);
+        //seniorEmployee.GetGreeting("Test", "Test");
+        //seniorEmployee.GetBonus(10, 10000);
+        //Employee<JuniorEmployee> juniorEmployee = new Employee<JuniorEmployee>();
+        //juniorEmployee.GetFullName("Test", "Test");
+        //juniorEmployee.GetFullInfo("Test", "Test", 30);
+        //juniorEmployee.GetGreeting("Test", "Test");
+        //juniorEmployee.GetBonus(5, 5000);
+
+        ////Extension method 
+        //ClassToBeExtended classToBeExtended = new ClassToBeExtended();
+        //classToBeExtended.FourthMethod();
+        //classToBeExtended.FifthMethod();
+        //classToBeExtended.SixthMethod();
+
+        ////static keyword 
+        //Person person = new Person();
+        //Console.WriteLine($"Person signature: {Person.signature}");
+        //Person.StaticClassExample();
+
+        //// Abstraction
+        //Dog dog = new Dog();
+        //dog.AnimalSayHello();
+        //dog.AnimalSayFullHello();
+
+        //// Encapsulation 
+        //Person person = new Person();
+        //string firstname = person.firstName = "test";
+        //string lastname = person.lastName = "test";
+        //int age = person.Age = 1;
+        //Console.WriteLine($"full name: {firstname} {lastname}, age: {age}, number: {person.number}");
+
+    }
 
         //private static IEnumerable<object> GetNumbers()
         //{
