@@ -51,6 +51,20 @@ namespace CSharp_Advanced
             MultiplyNumberNoRef(numberToMultiplyNoRef);
             Console.WriteLine(numberToMultiplyNoRef);
 
+            void ShowNumber(in int number)
+            {
+                Console.WriteLine(number);
+            }
+            ShowNumber(2);
+
+            void GiveValue(out int number)
+            {
+                number = 2; 
+            }
+            int number;
+            GiveValue(out number);
+            Console.WriteLine(number);
+
             ////Enum Flags
 
             //Colors multicolor = Colors.Black | Colors.Green | Colors.White;
