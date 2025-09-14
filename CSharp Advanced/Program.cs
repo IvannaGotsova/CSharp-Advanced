@@ -25,9 +25,28 @@ namespace CSharp_Advanced
 
         static void Main(string[] args)
         {
-            //Аnonymous type
-            var Example = new { Name = "example", Number = 1 };
-            Console.WriteLine($"Name: {Example.Name}, Number: {Example.Number}");
+            //Tuples C#
+            var example = ("Example", 1, true, 10.00);
+            Console.WriteLine(example.Item1); 
+            Console.WriteLine(example.Item2); 
+            Console.WriteLine(example.Item3);
+            Console.WriteLine(example.Item4);
+
+            (string name, int number, bool isBool, double numberDouble) example2 = (name: "Example2", number: 11, isBool: true, numberDouble: 11.00);
+            Console.WriteLine(example2.name);
+            Console.WriteLine(example2.number);
+            Console.WriteLine(example2.isBool);
+            Console.WriteLine(example2.numberDouble);
+
+            (int minNum, int maxNum) FindMinMax(List<int> numbers)
+            {
+                return (numbers.Min(), numbers.Max());
+            }
+            Console.WriteLine(FindMinMax(new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}));
+
+            ////Аnonymous type
+            //var Example = new { Name = "example", Number = 1 };
+            //Console.WriteLine($"Name: {Example.Name}, Number: {Example.Number}");
 
 
             ////Class Indexer 
