@@ -25,14 +25,19 @@ namespace CSharp_Advanced
 
         static void Main(string[] args)
         {
-            //Class Indexer 
+            //Аnonymous type
+            var Example = new { Name = "example", Number = 1 };
+            Console.WriteLine($"Name: {Example.Name}, Number: {Example.Number}");
 
-            ClassIndexer classIndexer = new ClassIndexer();
-            for (int i = 0; i < classIndexer.Length; i++)
-            {
-                classIndexer[i] = i;
-                Console.WriteLine(i);
-            }
+
+            ////Class Indexer 
+
+            //ClassIndexer classIndexer = new ClassIndexer();
+            //for (int i = 0; i < classIndexer.Length; i++)
+            //{
+            //    classIndexer[i] = i;
+            //    Console.WriteLine(i);
+            //}
 
             ////Dynamic
 
