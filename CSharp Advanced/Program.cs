@@ -25,16 +25,25 @@ namespace CSharp_Advanced
 
         static void Main(string[] args)
         {
-            //Dynamic
+            //Class Indexer 
 
-            dynamic example = "Example";
-            Console.WriteLine(example);
-            example = 2;
-            Console.WriteLine(example);
-            example = true;
-            Console.WriteLine(example);
-            Console.WriteLine(example.ToString());
-            Console.WriteLine(example.ToUpper());
+            ClassIndexer classIndexer = new ClassIndexer();
+            for (int i = 0; i < classIndexer.Length; i++)
+            {
+                classIndexer[i] = i;
+                Console.WriteLine(i);
+            }
+
+            ////Dynamic
+
+            //dynamic example = "Example";
+            //Console.WriteLine(example);
+            //example = 2;
+            //Console.WriteLine(example);
+            //example = true;
+            //Console.WriteLine(example);
+            //Console.WriteLine(example.ToString());
+            //Console.WriteLine(example.ToUpper());
 
 
             ////Ref, Out, In 
