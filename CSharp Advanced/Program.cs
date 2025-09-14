@@ -25,45 +25,57 @@ namespace CSharp_Advanced
 
         static void Main(string[] args)
         {
-            //Ref, Out, In 
+            //Dynamic
 
-            int MultiplyNumber(int number)
-            {
-                return number *= 2;               
-            }
-            int numberToMultiply = 2;
-            numberToMultiply = MultiplyNumber(numberToMultiply);
-            Console.WriteLine(numberToMultiply);
+            dynamic example = "Example";
+            Console.WriteLine(example);
+            example = 2;
+            Console.WriteLine(example);
+            example = true;
+            Console.WriteLine(example);
+            Console.WriteLine(example.ToString());
+            Console.WriteLine(example.ToUpper());
 
-            void MultiplyNumberRef(ref int number)
-            {
-                number *= 2;
-            }
-            int numberToMultiplyRef = 2;
-            MultiplyNumberRef(ref numberToMultiplyRef);
-            Console.WriteLine(numberToMultiplyRef);
 
-            void MultiplyNumberNoRef(int number)
-            {
-                number *= 2;
-            }
-            int numberToMultiplyNoRef = 2;
-            MultiplyNumberNoRef(numberToMultiplyNoRef);
-            Console.WriteLine(numberToMultiplyNoRef);
+            ////Ref, Out, In 
 
-            void ShowNumber(in int number)
-            {
-                Console.WriteLine(number);
-            }
-            ShowNumber(2);
+            //int MultiplyNumber(int number)
+            //{
+            //    return number *= 2;               
+            //}
+            //int numberToMultiply = 2;
+            //numberToMultiply = MultiplyNumber(numberToMultiply);
+            //Console.WriteLine(numberToMultiply);
 
-            void GiveValue(out int number)
-            {
-                number = 2; 
-            }
-            int number;
-            GiveValue(out number);
-            Console.WriteLine(number);
+            //void MultiplyNumberRef(ref int number)
+            //{
+            //    number *= 2;
+            //}
+            //int numberToMultiplyRef = 2;
+            //MultiplyNumberRef(ref numberToMultiplyRef);
+            //Console.WriteLine(numberToMultiplyRef);
+
+            //void MultiplyNumberNoRef(int number)
+            //{
+            //    number *= 2;
+            //}
+            //int numberToMultiplyNoRef = 2;
+            //MultiplyNumberNoRef(numberToMultiplyNoRef);
+            //Console.WriteLine(numberToMultiplyNoRef);
+
+            //void ShowNumber(in int number)
+            //{
+            //    Console.WriteLine(number);
+            //}
+            //ShowNumber(2);
+
+            //void GiveValue(out int number)
+            //{
+            //    number = 2; 
+            //}
+            //int number;
+            //GiveValue(out number);
+            //Console.WriteLine(number);
 
             ////Enum Flags
 
