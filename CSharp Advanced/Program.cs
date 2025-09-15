@@ -52,17 +52,17 @@ namespace CSharp_Advanced
             //threadTwo.Start();
             //Console.WriteLine("Main Thread");
 
-            ////Async
-            //var result = TaskAsyncClass.SecondTask().GetAwaiter().GetResult();
-            //Console.WriteLine(result);
+            //Async
+            var result = TaskAsyncClass.SecondTask().GetAwaiter().GetResult();
+            Console.WriteLine(result);
 
 
-            //LINQ
-            int[] numbers = [1, 3, 4, 5, 6, 8, 9, 11, 14, 16, 18, 20, 26, 28, 34, 39, 41, 44, 47, 55, 66, 71, 74, 79, 83, 85, 87, 92, 98];
-            List<int> evenNumbers = numbers.Where(x => x % 2 == 0).ToList();
-            evenNumbers.ForEach(x => Console.WriteLine(x));
-            List<int> evenNumbersMultiply = evenNumbers.Select(x => x * 2).ToList();
-            evenNumbersMultiply.ForEach(x => Console.WriteLine(x));
+            ////LINQ
+            //int[] numbers = [1, 3, 4, 5, 6, 8, 9, 11, 14, 16, 18, 20, 26, 28, 34, 39, 41, 44, 47, 55, 66, 71, 74, 79, 83, 85, 87, 92, 98];
+            //List<int> evenNumbers = numbers.Where(x => x % 2 == 0).ToList();
+            //evenNumbers.ForEach(x => Console.WriteLine(x));
+            //List<int> evenNumbersMultiply = evenNumbers.Select(x => x * 2).ToList();
+            //evenNumbersMultiply.ForEach(x => Console.WriteLine(x));
 
 
             ////Tuples C#
