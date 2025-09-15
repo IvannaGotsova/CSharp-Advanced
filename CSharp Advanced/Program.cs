@@ -3,12 +3,32 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
+using System.Threading;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace CSharp_Advanced
 {
     internal class Program
     {
+        static void PrintFirstThread()
+        {
+            Thread.Sleep(500);
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine($"Thread 1: {i}");
+                Thread.Sleep(400); 
+            }
+        }
+
+        static void PrintSecondThread()
+        {
+            Thread.Sleep(500);
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine($"Thread 2: {i}");
+                Thread.Sleep(800); 
+            }
+        }
         //public delegate void MyDelegateExample(string delegateStringExample);
 
         //[Flags]
@@ -25,24 +45,44 @@ namespace CSharp_Advanced
 
         static void Main(string[] args)
         {
-            //Tuples C#
-            var example = ("Example", 1, true, 10.00);
-            Console.WriteLine(example.Item1); 
-            Console.WriteLine(example.Item2); 
-            Console.WriteLine(example.Item3);
-            Console.WriteLine(example.Item4);
+            //Multithreading
+            Thread threadOne = new Thread(PrintFirstThread);
+            threadOne.Start();
+            Thread threadTwo = new Thread(PrintSecondThread);
+            threadTwo.Start();
+            Console.WriteLine("Main Thread");
 
-            (string name, int number, bool isBool, double numberDouble) example2 = (name: "Example2", number: 11, isBool: true, numberDouble: 11.00);
-            Console.WriteLine(example2.name);
-            Console.WriteLine(example2.number);
-            Console.WriteLine(example2.isBool);
-            Console.WriteLine(example2.numberDouble);
+            ////Async
+            //var result = TaskAsyncClass.SecondTask().GetAwaiter().GetResult();
+            //Console.WriteLine(result);
 
-            (int minNum, int maxNum) FindMinMax(List<int> numbers)
-            {
-                return (numbers.Min(), numbers.Max());
-            }
-            Console.WriteLine(FindMinMax(new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}));
+
+            ////LINQ
+            //int[] numbers = [1, 3, 4, 5, 6, 8, 9, 11, 14, 16, 18, 20, 26, 28, 34, 39, 41, 44, 47, 55, 66, 71, 74, 79, 83, 85, 87, 92, 98];
+            //List<int> evenNumbers = numbers.Where(x => x % 2 == 0).ToList();
+            //evenNumbers.ForEach(x => Console.WriteLine(x));
+            //List<int> evenNumbersMultiply = evenNumbers.Select(x => x * 2).ToList();
+            //evenNumbersMultiply.ForEach(x => Console.WriteLine(x));
+
+
+            ////Tuples C#
+            //var example = ("Example", 1, true, 10.00);
+            //Console.WriteLine(example.Item1); 
+            //Console.WriteLine(example.Item2); 
+            //Console.WriteLine(example.Item3);
+            //Console.WriteLine(example.Item4);
+
+            //(string name, int number, bool isBool, double numberDouble) example2 = (name: "Example2", number: 11, isBool: true, numberDouble: 11.00);
+            //Console.WriteLine(example2.name);
+            //Console.WriteLine(example2.number);
+            //Console.WriteLine(example2.isBool);
+            //Console.WriteLine(example2.numberDouble);
+
+            //(int minNum, int maxNum) FindMinMax(List<int> numbers)
+            //{
+            //    return (numbers.Min(), numbers.Max());
+            //}
+            //Console.WriteLine(FindMinMax(new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}));
 
             ////Аnonymous type
             //var Example = new { Name = "example", Number = 1 };
