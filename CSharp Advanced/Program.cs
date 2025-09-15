@@ -10,25 +10,25 @@ namespace CSharp_Advanced
 {
     internal class Program
     {
-        static void PrintFirstThread()
-        {
-            Thread.Sleep(500);
-            for (int i = 0; i < 10; i++)
-            {
-                Console.WriteLine($"Thread 1: {i}");
-                Thread.Sleep(400); 
-            }
-        }
+        //static void PrintFirstThread()
+        //{
+        //    Thread.Sleep(500);
+        //    for (int i = 0; i < 10; i++)
+        //    {
+        //        Console.WriteLine($"Thread 1: {i}");
+        //        Thread.Sleep(400); 
+        //    }
+        //}
 
-        static void PrintSecondThread()
-        {
-            Thread.Sleep(500);
-            for (int i = 0; i < 10; i++)
-            {
-                Console.WriteLine($"Thread 2: {i}");
-                Thread.Sleep(800); 
-            }
-        }
+        //static void PrintSecondThread()
+        //{
+        //    Thread.Sleep(500);
+        //    for (int i = 0; i < 10; i++)
+        //    {
+        //        Console.WriteLine($"Thread 2: {i}");
+        //        Thread.Sleep(800); 
+        //    }
+        //}
         //public delegate void MyDelegateExample(string delegateStringExample);
 
         //[Flags]
@@ -45,24 +45,24 @@ namespace CSharp_Advanced
 
         static void Main(string[] args)
         {
-            //Multithreading
-            Thread threadOne = new Thread(PrintFirstThread);
-            threadOne.Start();
-            Thread threadTwo = new Thread(PrintSecondThread);
-            threadTwo.Start();
-            Console.WriteLine("Main Thread");
+            ////Multithreading
+            //Thread threadOne = new Thread(PrintFirstThread);
+            //threadOne.Start();
+            //Thread threadTwo = new Thread(PrintSecondThread);
+            //threadTwo.Start();
+            //Console.WriteLine("Main Thread");
 
             ////Async
             //var result = TaskAsyncClass.SecondTask().GetAwaiter().GetResult();
             //Console.WriteLine(result);
 
 
-            ////LINQ
-            //int[] numbers = [1, 3, 4, 5, 6, 8, 9, 11, 14, 16, 18, 20, 26, 28, 34, 39, 41, 44, 47, 55, 66, 71, 74, 79, 83, 85, 87, 92, 98];
-            //List<int> evenNumbers = numbers.Where(x => x % 2 == 0).ToList();
-            //evenNumbers.ForEach(x => Console.WriteLine(x));
-            //List<int> evenNumbersMultiply = evenNumbers.Select(x => x * 2).ToList();
-            //evenNumbersMultiply.ForEach(x => Console.WriteLine(x));
+            //LINQ
+            int[] numbers = [1, 3, 4, 5, 6, 8, 9, 11, 14, 16, 18, 20, 26, 28, 34, 39, 41, 44, 47, 55, 66, 71, 74, 79, 83, 85, 87, 92, 98];
+            List<int> evenNumbers = numbers.Where(x => x % 2 == 0).ToList();
+            evenNumbers.ForEach(x => Console.WriteLine(x));
+            List<int> evenNumbersMultiply = evenNumbers.Select(x => x * 2).ToList();
+            evenNumbersMultiply.ForEach(x => Console.WriteLine(x));
 
 
             ////Tuples C#
