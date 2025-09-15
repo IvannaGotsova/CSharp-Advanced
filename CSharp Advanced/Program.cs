@@ -53,8 +53,8 @@ namespace CSharp_Advanced
             //Console.WriteLine("Main Thread");
 
             //Async
-            var result = TaskAsyncClass.SecondTask().GetAwaiter().GetResult();
-            Console.WriteLine(result);
+            //var result = TaskAsyncClass.SecondTask().GetAwaiter().GetResult();
+            //Console.WriteLine(result);
 
 
             ////LINQ
