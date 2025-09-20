@@ -45,6 +45,12 @@ namespace CSharp_Advanced
 
         static void Main(string[] args)
         {
+            //Predicate, Func, Action 
+
+            Action<string> printHello = x => Console.WriteLine($"Hello {x}");
+            printHello("World");
+
+
             ////Multithreading
             //Thread threadOne = new Thread(PrintFirstThread);
             //threadOne.Start();
