@@ -47,6 +47,9 @@ namespace CSharp_Advanced
         {
             //Predicate, Func, Action 
 
+            Func<int, int, int> printSum = (x, y) => x + y;
+            Console.WriteLine(printSum(5, 3));
+
             Action<string> printHello = x => Console.WriteLine($"Hello {x}");
             printHello("World");
 
