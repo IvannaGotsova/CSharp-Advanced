@@ -47,6 +47,9 @@ namespace CSharp_Advanced
         {
             //Predicate, Func, Action 
 
+            Predicate<int> isFour = x => x == 4;
+            Console.WriteLine(isFour(4));
+
             Func<int, int, int> printSum = (x, y) => x + y;
             Console.WriteLine(printSum(5, 3));
 
