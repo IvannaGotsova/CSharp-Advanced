@@ -45,44 +45,13 @@ namespace CSharp_Advanced
 
         static void Main(string[] args)
         {
-            ////Yield break
-            //foreach (int number in GenerateNumbersTwo(100))
-            //{
-            //    Console.WriteLine(number);
-            //}
-
-            //static IEnumerable<int> GenerateNumbersTwo(int numberMoreThanFive)
-            //{
-            //    if (numberMoreThanFive <= 5)
-            //    {
-            //        Console.WriteLine("Number must be greater than 5");
-            //        yield return 0;
-            //    }
-            //    yield return 1;
-            //    yield return 2;
-            //    yield return 3;
-            //    yield return 4;
-            //    yield return 5;
-
-            //    for (int i = 6; i <= numberMoreThanFive; i++)
-            //    {
-            //        if (i == 50)
-            //        {
-            //            Console.WriteLine("You reached 50");
-            //            yield break;
-            //        }
-            //        yield return i;
-            //    }
-            //}
-
-
-            //Yield 
-            foreach (int number in GenerateNumbers(100))
+            //Yield break
+            foreach (int number in GenerateNumbersTwo(100))
             {
                 Console.WriteLine(number);
             }
 
-            static IEnumerable<int> GenerateNumbers(int numberMoreThanFive)
+            static IEnumerable<int> GenerateNumbersTwo(int numberMoreThanFive)
             {
                 if (numberMoreThanFive <= 5)
                 {
@@ -97,9 +66,40 @@ namespace CSharp_Advanced
 
                 for (int i = 6; i <= numberMoreThanFive; i++)
                 {
+                    if (i == 50)
+                    {
+                        Console.WriteLine("You reached 50");
+                        yield break;
+                    }
                     yield return i;
                 }
             }
+
+
+            ////Yield 
+            //foreach (int number in GenerateNumbers(100))
+            //{
+            //    Console.WriteLine(number);
+            //}
+
+            //static IEnumerable<int> GenerateNumbers(int numberMoreThanFive)
+            //{
+            //    if (numberMoreThanFive <= 5)
+            //    {
+            //        Console.WriteLine("Number must be greater than 5");
+            //        yield return 0;
+            //    }
+            //    yield return 1;
+            //    yield return 2;
+            //    yield return 3;
+            //    yield return 4;
+            //    yield return 5;
+
+            //    for (int i = 6; i <= numberMoreThanFive; i++)
+            //    {
+            //        yield return i;
+            //    }
+            //}
 
 
             ////Events
