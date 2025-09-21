@@ -76,63 +76,63 @@ namespace CSharp_Advanced
             //}
 
 
-            ////Yield 
-            //foreach (int number in GenerateNumbers(100))
-            //{
-            //    Console.WriteLine(number);
-            //}
-
-            //static IEnumerable<int> GenerateNumbers(int numberMoreThanFive)
-            //{
-            //    if (numberMoreThanFive <= 5)
-            //    {
-            //        Console.WriteLine("Number must be greater than 5");
-            //        yield return 0;
-            //    }
-            //    yield return 1;
-            //    yield return 2;
-            //    yield return 3;
-            //    yield return 4;
-            //    yield return 5;
-
-            //    for (int i = 6; i <= numberMoreThanFive; i++)
-            //    {
-            //        yield return i;
-            //    }
-            //}
-
-
-            //Events
-            while (true)
+            //Yield 
+            foreach (int number in GenerateNumbers(100))
             {
-                Console.WriteLine("Press any key.");
-                ConsoleKeyInfo keyInfo = Console.ReadKey(true);
-
-                if (keyInfo.Key == ConsoleKey.Q)
-                {
-                    Console.WriteLine($"Pressed: {keyInfo.Key}");
-                    Console.WriteLine("THE END");
-                    break;
-                }
-                else if (keyInfo.Key == ConsoleKey.Z)
-                {
-                    Console.WriteLine("FIRST");
-                }
-                else if (keyInfo.Key == ConsoleKey.X)
-                {
-                    Console.WriteLine("SECOND");
-                }
-                else if (keyInfo.Key == ConsoleKey.Y)
-                {
-                    Console.WriteLine("THIRD");
-                }
-                else if (keyInfo.Key == ConsoleKey.U)
-                {
-                    Console.WriteLine("FOURTH");
-                }
-                Console.WriteLine($"Pressed: {keyInfo.Key}");
-                
+                Console.WriteLine(number);
             }
+
+            static IEnumerable<int> GenerateNumbers(int numberMoreThanFive)
+            {
+                if (numberMoreThanFive <= 5)
+                {
+                    Console.WriteLine("Number must be greater than 5");
+                    yield return 0;
+                }
+                yield return 1;
+                yield return 2;
+                yield return 3;
+                yield return 4;
+                yield return 5;
+
+                for (int i = 6; i <= numberMoreThanFive; i++)
+                {
+                    yield return i;
+                }
+            }
+
+
+            ////Events
+            //while (true)
+            //{
+            //    Console.WriteLine("Press any key.");
+            //    ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+
+            //    if (keyInfo.Key == ConsoleKey.Q)
+            //    {
+            //        Console.WriteLine($"Pressed: {keyInfo.Key}");
+            //        Console.WriteLine("THE END");
+            //        break;
+            //    }
+            //    else if (keyInfo.Key == ConsoleKey.Z)
+            //    {
+            //        Console.WriteLine("FIRST");
+            //    }
+            //    else if (keyInfo.Key == ConsoleKey.X)
+            //    {
+            //        Console.WriteLine("SECOND");
+            //    }
+            //    else if (keyInfo.Key == ConsoleKey.Y)
+            //    {
+            //        Console.WriteLine("THIRD");
+            //    }
+            //    else if (keyInfo.Key == ConsoleKey.U)
+            //    {
+            //        Console.WriteLine("FOURTH");
+            //    }
+            //    Console.WriteLine($"Pressed: {keyInfo.Key}");
+
+            //}
 
 
             ////Predicate, Func, Action 
