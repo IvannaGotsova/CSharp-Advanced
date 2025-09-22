@@ -45,6 +45,11 @@ namespace CSharp_Advanced
 
         static void Main(string[] args)
         {
+            //Loose Coupling
+            ILooseCoupling looseCoupling = new LooseCouplingClass(); 
+            looseCoupling.LooseCoupling("Loose Coupling");
+
+
             ////Ref, Out, In 
 
             //int MultiplyNumber(int number)
@@ -77,13 +82,13 @@ namespace CSharp_Advanced
             //}
             //ShowNumber(2);
 
-            void GiveValue(out int number)
-            {
-                number = 2;
-            }
-            int number;
-            GiveValue(out number);
-            Console.WriteLine(number);
+            //void GiveValue(out int number)
+            //{
+            //    number = 2;
+            //}
+            //int number;
+            //GiveValue(out number);
+            //Console.WriteLine(number);
 
             ////Yield break
             //foreach (int number in GenerateNumbersTwo(100))
