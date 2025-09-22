@@ -45,37 +45,37 @@ namespace CSharp_Advanced
 
         static void Main(string[] args)
         {
-            //Ref, Out, In 
+            ////Ref, Out, In 
 
-            int MultiplyNumber(int number)
-            {
-                return number *= 2;
-            }
-            int numberToMultiply = 2;
-            numberToMultiply = MultiplyNumber(numberToMultiply);
-            Console.WriteLine(numberToMultiply);
-
-            void MultiplyNumberRef(ref int number)
-            {
-                number *= 2;
-            }
-            int numberToMultiplyRef = 2;
-            MultiplyNumberRef(ref numberToMultiplyRef);
-            Console.WriteLine(numberToMultiplyRef);
-
-            void MultiplyNumberNoRef(int number)
-            {
-                number *= 2;
-            }
-            int numberToMultiplyNoRef = 2;
-            MultiplyNumberNoRef(numberToMultiplyNoRef);
-            Console.WriteLine(numberToMultiplyNoRef);
-
-            //void ShowNumber(in int number)
+            //int MultiplyNumber(int number)
             //{
-            //    Console.WriteLine(number);
+            //    return number *= 2;
             //}
-            //ShowNumber(2);
+            //int numberToMultiply = 2;
+            //numberToMultiply = MultiplyNumber(numberToMultiply);
+            //Console.WriteLine(numberToMultiply);
+
+            //void MultiplyNumberRef(ref int number)
+            //{
+            //    number *= 2;
+            //}
+            //int numberToMultiplyRef = 2;
+            //MultiplyNumberRef(ref numberToMultiplyRef);
+            //Console.WriteLine(numberToMultiplyRef);
+
+            //void MultiplyNumberNoRef(int number)
+            //{
+            //    number *= 2;
+            //}
+            //int numberToMultiplyNoRef = 2;
+            //MultiplyNumberNoRef(numberToMultiplyNoRef);
+            //Console.WriteLine(numberToMultiplyNoRef);
+
+            void ShowNumber(in int number)
+            {
+                Console.WriteLine(number);
+            }
+            ShowNumber(2);
 
             //void GiveValue(out int number)
             //{
