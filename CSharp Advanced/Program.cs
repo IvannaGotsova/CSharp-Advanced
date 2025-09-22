@@ -45,9 +45,13 @@ namespace CSharp_Advanced
 
         static void Main(string[] args)
         {
-            //Loose Coupling
-            ILooseCoupling looseCoupling = new LooseCouplingClass(); 
-            looseCoupling.LooseCoupling("Loose Coupling");
+            //Dependency Injection
+            IDependencyInjection dependencyInjection = new DependencyInjectionClass();
+            dependencyInjection.DependencyInjection("Dependency Injection");
+
+            ////Loose Coupling
+            //ILooseCoupling looseCoupling = new LooseCouplingClass(); 
+            //looseCoupling.LooseCoupling("Loose Coupling");
 
 
             ////Ref, Out, In 
