@@ -71,19 +71,19 @@ namespace CSharp_Advanced
             //MultiplyNumberNoRef(numberToMultiplyNoRef);
             //Console.WriteLine(numberToMultiplyNoRef);
 
-            void ShowNumber(in int number)
-            {
-                Console.WriteLine(number);
-            }
-            ShowNumber(2);
-
-            //void GiveValue(out int number)
+            //void ShowNumber(in int number)
             //{
-            //    number = 2;
+            //    Console.WriteLine(number);
             //}
-            //int number;
-            //GiveValue(out number);
-            //Console.WriteLine(number);
+            //ShowNumber(2);
+
+            void GiveValue(out int number)
+            {
+                number = 2;
+            }
+            int number;
+            GiveValue(out number);
+            Console.WriteLine(number);
 
             ////Yield break
             //foreach (int number in GenerateNumbersTwo(100))
