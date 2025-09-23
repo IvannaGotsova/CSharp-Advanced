@@ -45,12 +45,17 @@ namespace CSharp_Advanced
 
         static void Main(string[] args)
         {
-            //Dynamic Var
-            dynamic textDynamic = "Hello, world DYNAMIC!";
-            var textVar = "Hello, world VAR!";
+            //Data Boxing
+            int number = 4;         
+            object boxedNumber = number;
 
-            Console.WriteLine(textDynamic);
-            Console.WriteLine(textVar);
+
+            ////Dynamic Var
+            //dynamic textDynamic = "Hello, world DYNAMIC!";
+            //var textVar = "Hello, world VAR!";
+
+            //Console.WriteLine(textDynamic);
+            //Console.WriteLine(textVar);
 
             ////Dependency Injection
             //IDependencyInjection dependencyInjection = new DependencyInjectionClass();
