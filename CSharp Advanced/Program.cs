@@ -45,9 +45,16 @@ namespace CSharp_Advanced
 
         static void Main(string[] args)
         {
-            //Dependency Injection
-            IDependencyInjection dependencyInjection = new DependencyInjectionClass();
-            dependencyInjection.DependencyInjection("Dependency Injection");
+            //Dynamic Var
+            dynamic textDynamic = "Hello, world DYNAMIC!";
+            var textVar = "Hello, world VAR!";
+
+            Console.WriteLine(textDynamic);
+            Console.WriteLine(textVar);
+
+            ////Dependency Injection
+            //IDependencyInjection dependencyInjection = new DependencyInjectionClass();
+            //dependencyInjection.DependencyInjection("Dependency Injection");
 
             ////Loose Coupling
             //ILooseCoupling looseCoupling = new LooseCouplingClass(); 
