@@ -45,9 +45,14 @@ namespace CSharp_Advanced
 
         static void Main(string[] args)
         {
-            //Data Boxing
-            int number = 4;         
-            object boxedNumber = number;
+            //Data Unboxing
+            object boxedNumber = 4;       
+            int number = (int)boxedNumber;
+
+
+            ////Data Boxing
+            //int number = 4;         
+            //object boxedNumber = number;
 
 
             ////Dynamic Var
