@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
@@ -46,6 +47,20 @@ namespace CSharp_Advanced
         static void Main(string[] args)
         {
 
+            //Reflection
+            Person person = new Person();
+            Type personType = person.GetType();
+            Console.WriteLine(personType.Name);
+
+            MethodInfo[] personMethods = personType.GetMethods();
+            int counter = 0;
+            foreach (var method in personMethods)
+            {
+                counter++;
+                Console.WriteLine($"{counter}. Method - " + method.Name);
+            }
+            MethodInfo staticClassExampleMethod = personType.GetMethod("StaticClassExample");
+            staticClassExampleMethod.Invoke(person, null);
 
             ////Data Unboxing
             //object boxedNumber = 4;       
