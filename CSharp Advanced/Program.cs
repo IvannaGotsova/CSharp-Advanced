@@ -44,38 +44,42 @@ namespace CSharp_Advanced
         //    Orange = 32
         //};
 
-        static async Task RunAsyncTask()
-        {
-            Task printNumbersAsyncTask = PrintNumbersAsyncTask();
-            Task timerAsyncTask = PrintEveryFiveSecondsAsyncTask();
+        //static async Task RunAsyncTask()
+        //{
+        //    Task printNumbersAsyncTask = PrintNumbersAsyncTask();
+        //    Task timerAsyncTask = PrintEveryFiveSecondsAsyncTask();
 
-            await Task.WhenAll(printNumbersAsyncTask, timerAsyncTask);
-        }
+        //    await Task.WhenAll(printNumbersAsyncTask, timerAsyncTask);
+        //}
 
-        static async Task PrintNumbersAsyncTask()
-        {
-            for (int i = 1; i <= 1000; i++)
-            {
-                Console.WriteLine($"Number: {i}");
-                await Task.Delay(100);
-            }
-        }
+        //static async Task PrintNumbersAsyncTask()
+        //{
+        //    for (int i = 1; i <= 1000; i++)
+        //    {
+        //        Console.WriteLine($"Number: {i}");
+        //        await Task.Delay(100);
+        //    }
+        //}
 
-        static async Task PrintEveryFiveSecondsAsyncTask()
-        {
-            int counter = 0;
-            while (counter < 100000)
-            {
-                await Task.Delay(5000);
-                Console.WriteLine("Five seconds");
-                counter += 5000;
-            }
-        }
+        //static async Task PrintEveryFiveSecondsAsyncTask()
+        //{
+        //    int counter = 0;
+        //    while (counter < 100000)
+        //    {
+        //        await Task.Delay(5000);
+        //        Console.WriteLine("Five seconds");
+        //        counter += 5000;
+        //    }
+        //}
 
         static void Main(string[] args)
         {
-            //Async await 
-            Task.Run(() => RunAsyncTask()).GetAwaiter().GetResult();
+            //SOLID
+
+
+
+            ////Async await 
+            //Task.Run(() => RunAsyncTask()).GetAwaiter().GetResult();
 
 
             ////Reflection
