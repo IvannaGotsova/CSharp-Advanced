@@ -74,8 +74,18 @@ namespace CSharp_Advanced
 
         static void Main(string[] args)
         {
-            //SOLID
-
+            ////SOLID
+            //Single responsibility principle
+            PersonSRP personSRP = new PersonSRP();
+            personSRP.firstName = "Ivan";
+            personSRP.lastName = "Ivanov";
+            personSRP.age = 34;
+            PersonSRPFullName personSRPFullName = new PersonSRPFullName();
+            string fullName = personSRPFullName.FullName(personSRP);
+            Console.WriteLine(fullName);
+            PersonSRPAge personSRPAge = new PersonSRPAge();
+            int birthDate = personSRPAge.BirthDate(personSRP);
+            Console.WriteLine(birthDate);
 
 
             ////Async await 
