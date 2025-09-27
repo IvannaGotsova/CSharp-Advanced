@@ -96,19 +96,30 @@ namespace CSharp_Advanced
             //Console.WriteLine(dogOCPTwo.Behavior(dogOCP));
             //Console.WriteLine(dogOCPThree.Behavior(dogOCP));
 
+
             ////Liskov substitution principle
             //AnimalLSP dogLSP = new DogLSP();
             //Console.WriteLine(dogLSP.Behavior);
             //AnimalLSP catLSP = new CatLSP();
             //Console.WriteLine(catLSP.Behavior);
 
-            //Interface segregation principle
-            DogISP dogISP = new DogISP();
-            CatISP catISP = new CatISP();
-            dogISP.Bark();
-            dogISP.Walk();
-            catISP.Meow();
-            catISP.Walk();
+
+            ////Interface segregation principle
+            //DogISP dogISP = new DogISP();
+            //CatISP catISP = new CatISP();
+            //dogISP.Bark();
+            //dogISP.Walk();
+            //catISP.Meow();
+            //catISP.Walk();
+
+
+            //Dependency inversion principle
+            CatDIP catDIP = new CatDIP();
+            DogDIP dogDIP = new DogDIP();
+            PersonDIP personDIPCat = new PersonDIP(catDIP);
+            PersonDIP personDIPDog = new PersonDIP(dogDIP);
+            personDIPCat.WalkAnimal();
+            personDIPDog.WalkAnimal();
 
 
             ////Async await 
