@@ -87,14 +87,20 @@ namespace CSharp_Advanced
             //int birthDate = personSRPAge.BirthDate(personSRP);
             //Console.WriteLine(birthDate);
 
-            //Open–closed principle
-            DogOCP dogOCP = new DogOCP();
-            IDogOCP dogOCPOne = new DogOCPBarkOne();
-            IDogOCP dogOCPTwo = new DogOCPBarkThree();
-            IDogOCP dogOCPThree = new DogOCPBarkFive();
-            Console.WriteLine(dogOCPOne.Behavior(dogOCP));
-            Console.WriteLine(dogOCPTwo.Behavior(dogOCP));
-            Console.WriteLine(dogOCPThree.Behavior(dogOCP));
+            ////Open–closed principle
+            //DogOCP dogOCP = new DogOCP();
+            //IDogOCP dogOCPOne = new DogOCPBarkOne();
+            //IDogOCP dogOCPTwo = new DogOCPBarkThree();
+            //IDogOCP dogOCPThree = new DogOCPBarkFive();
+            //Console.WriteLine(dogOCPOne.Behavior(dogOCP));
+            //Console.WriteLine(dogOCPTwo.Behavior(dogOCP));
+            //Console.WriteLine(dogOCPThree.Behavior(dogOCP));
+
+            //Liskov substitution principle
+            AnimalLSP dogLSP = new DogLSP();
+            Console.WriteLine(dogLSP.Behavior);
+            AnimalLSP catLSP = new CatLSP();
+            Console.WriteLine(catLSP.Behavior);
 
             ////Async await 
             //Task.Run(() => RunAsyncTask()).GetAwaiter().GetResult();
