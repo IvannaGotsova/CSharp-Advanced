@@ -75,18 +75,26 @@ namespace CSharp_Advanced
         static void Main(string[] args)
         {
             ////SOLID
-            //Single responsibility principle
-            PersonSRP personSRP = new PersonSRP();
-            personSRP.firstName = "Ivan";
-            personSRP.lastName = "Ivanov";
-            personSRP.age = 34;
-            PersonSRPFullName personSRPFullName = new PersonSRPFullName();
-            string fullName = personSRPFullName.FullName(personSRP);
-            Console.WriteLine(fullName);
-            PersonSRPAge personSRPAge = new PersonSRPAge();
-            int birthDate = personSRPAge.BirthDate(personSRP);
-            Console.WriteLine(birthDate);
+            ////Single responsibility principle
+            //PersonSRP personSRP = new PersonSRP();
+            //personSRP.firstName = "Ivan";
+            //personSRP.lastName = "Ivanov";
+            //personSRP.age = 34;
+            //PersonSRPFullName personSRPFullName = new PersonSRPFullName();
+            //string fullName = personSRPFullName.FullName(personSRP);
+            //Console.WriteLine(fullName);
+            //PersonSRPAge personSRPAge = new PersonSRPAge();
+            //int birthDate = personSRPAge.BirthDate(personSRP);
+            //Console.WriteLine(birthDate);
 
+            //Open–closed principle
+            DogOCP dogOCP = new DogOCP();
+            IDogOCP dogOCPOne = new DogOCPBarkOne();
+            IDogOCP dogOCPTwo = new DogOCPBarkThree();
+            IDogOCP dogOCPThree = new DogOCPBarkFive();
+            Console.WriteLine(dogOCPOne.Behavior(dogOCP));
+            Console.WriteLine(dogOCPTwo.Behavior(dogOCP));
+            Console.WriteLine(dogOCPThree.Behavior(dogOCP));
 
             ////Async await 
             //Task.Run(() => RunAsyncTask()).GetAwaiter().GetResult();
